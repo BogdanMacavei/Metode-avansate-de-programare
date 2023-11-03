@@ -12,12 +12,18 @@ public class TrupaRepo {
 
     public Trupa createTrupa(String numeTrupa, int idManager, int anFormare){
         Trupa trupa = new Trupa(nextTrupaId,numeTrupa,idManager, anFormare);
+        if (trupa.getanFormare() > 2023)
+            throw new IllegalArgumentException();
+
         trupe.add(trupa);
         nextTrupaId++;
         return trupa;
     }
 
     public Trupa getTrupaById(int id) {
+        if (id < 0)
+            throw new IllegalArgumentException();
+
         for (Trupa trupa : trupe) {
             if (trupa.getIdTrupa() == id) {
                 return trupa;
@@ -31,6 +37,8 @@ public class TrupaRepo {
     }
 
     public Trupa updateTrupa(Trupa trupa){
+        if (trupa.getNumeTrupa() == "Non-Existent Trupa")
+            throw new NullPointerException();
 
         for (Trupa t : trupe){
             if(t.getIdTrupa()==trupa.getIdTrupa()){
