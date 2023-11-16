@@ -1,8 +1,8 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
 
-import domain.Merchandise;
-import repository.inMemoryRepo.MerchandiseRepo;
+import Lab2.Lab2.src.domain.Merchandise;
+import Lab2.Lab2.src.repository.inMemoryRepo.MerchandiseRepo;
 
 import java.util.List;
 import java.util.ArrayList;

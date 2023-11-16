@@ -1,4 +1,4 @@
-package domain;
+package Lab2.Lab2.src.domain;
 
 public class Merchandise {
     private int idProdus;

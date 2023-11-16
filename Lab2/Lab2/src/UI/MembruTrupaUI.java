@@ -1,7 +1,7 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
-import domain.MembruTrupa;
-import repository.inMemoryRepo.MembruTrupaRepo;
+import Lab2.Lab2.src.domain.MembruTrupa;
+import Lab2.Lab2.src.repository.inMemoryRepo.MembruTrupaRepo;
 
 import java.time.LocalDate;
 import java.util.List;

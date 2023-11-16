@@ -1,7 +1,7 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
-import domain.Manager;
-import repository.inMemoryRepo.ManagerRepo;
+import Lab2.Lab2.src.domain.Manager;
+import Lab2.Lab2.src.repository.inMemoryRepo.ManagerRepo;
 
 import java.time.LocalDate;
 import java.util.List;

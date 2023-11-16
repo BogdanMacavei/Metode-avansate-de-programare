@@ -1,18 +1,25 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
-import domain.Album;
-import repository.inMemoryRepo.AlbumRepo;
+import Lab2.Lab2.src.domain.Album;
+import Lab2.Lab2.src.domain.Fan;
+import Lab2.Lab2.src.repository.inMemoryRepo.AlbumRepo;
+import Lab2.Lab2.src.repository.inMemoryRepo.FanRepo;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class AlbumUI {
     private static final AlbumRepo albumRepo = new AlbumRepo();
     private static final Scanner scanner = new Scanner(System.in);
 
+    private static final FanRepo fanRepo = new FanRepo();
+
+
     public static void main(String[] args) {
+        AlbumUI albumUI = new AlbumUI();
+
         boolean running = true;
 
         while (running) {
@@ -63,8 +70,10 @@ public class AlbumUI {
         String releaseDateStr = scanner.nextLine();
         LocalDate releaseDate = LocalDate.parse(releaseDateStr);
 
-        Album createdAlbum = albumRepo.createAlbum(artistId, title, releaseDate);
+        Fan fan = new Fan(1, "John", "Doe", LocalDate.of(1990, 1, 1));
+        Album createdAlbum = albumRepo.createAlbum(artistId, title, releaseDate, fan);
         System.out.println("Album creat cu ID: " + createdAlbum.getIdAlbum());
+        fanRepo.notifyFans(createdAlbum);
     }
 
     private static void viewAllAlbums() {
@@ -96,9 +105,6 @@ public class AlbumUI {
         String releaseDateStr = scanner.nextLine();
         LocalDate releaseDate = LocalDate.parse(releaseDateStr);
 
-        Album updatedAlbum = new Album(albumId, artistId, title, releaseDate);
-        albumRepo.updateAlbume(updatedAlbum);
-        System.out.println("Album actualizat cu succes.");
     }
 
     private static void deleteAlbum() {
@@ -109,4 +115,6 @@ public class AlbumUI {
         albumRepo.removeAlbum(albumId);
         System.out.println("Album sters cu succes.");
     }
+
 }
+

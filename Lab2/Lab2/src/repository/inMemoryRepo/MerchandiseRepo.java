@@ -1,6 +1,6 @@
-package repository.inMemoryRepo;
+package Lab2.Lab2.src.repository.inMemoryRepo;
 
-import domain.Merchandise;
+import Lab2.Lab2.src.domain.Merchandise;
 
 import java.util.ArrayList;
 import java.util.List;

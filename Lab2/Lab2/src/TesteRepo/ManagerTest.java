@@ -1,8 +1,8 @@
-package TesteRepo;
+package Lab2.Lab2.src.TesteRepo;
 
 
-import domain.Manager;
-import repository.inMemoryRepo.ManagerRepo;
+import Lab2.Lab2.src.domain.Manager;
+import Lab2.Lab2.src.repository.inMemoryRepo.ManagerRepo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

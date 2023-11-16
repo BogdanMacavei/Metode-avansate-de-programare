@@ -1,8 +1,8 @@
-package domain;
+package Lab2.Lab2.src.domain;
 
 import java.time.LocalDate;
 
-public class Fan extends Persoana{
+public class Fan extends org.example.domain.Persoana implements AlbumObserver {
     private int idFan;
     private String nume;
     private String prenume;
@@ -10,6 +10,9 @@ public class Fan extends Persoana{
 
     public Fan(int idFan, String nume, String prenume, LocalDate dataNasterii) {
         super(idFan, nume, prenume);
+        this.idFan = idFan;
+        this.nume = nume;
+        this.prenume = prenume;
         this.dataNasterii = dataNasterii;
     }
 
@@ -58,4 +61,12 @@ public class Fan extends Persoana{
                 ", dataNasterii=" + dataNasterii +
                 '}';
     }
+
+    @Override
+    public void albumAdded(Album album, Fan fan) {
+        System.out.println("Fan notified about the new album: " + album.getTitlu());
+    }
+
 }
+
+

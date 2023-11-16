@@ -1,6 +1,8 @@
-package domain;
+package Lab2.Lab2.src.domain;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Album {
     private int idAlbum;
@@ -8,7 +10,8 @@ public class Album {
     private LocalDate anLansare;
     private int idTrupa;
 
-    public Album(int idAlbum,int idTrupa ,String titlu, LocalDate anLansare) {
+
+    public Album(int idAlbum, int idTrupa, String titlu, LocalDate anLansare) {
         this.idAlbum = idAlbum;
         this.idTrupa = idTrupa;
         this.titlu = titlu;

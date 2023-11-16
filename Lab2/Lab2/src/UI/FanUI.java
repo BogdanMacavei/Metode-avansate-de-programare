@@ -1,19 +1,26 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
-import domain.Fan;
-import repository.inMemoryRepo.FanRepo;
+import Lab2.Lab2.src.domain.Album;
+import Lab2.Lab2.src.domain.AlbumObserver;
+import Lab2.Lab2.src.domain.Fan;
+import Lab2.Lab2.src.repository.inMemoryRepo.AlbumRepo;
+import Lab2.Lab2.src.repository.inMemoryRepo.FanRepo;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FanUI {
+public class FanUI implements AlbumObserver {
     private static final FanRepo fanRepo = new FanRepo();
+    private static final AlbumRepo albumRepo = AlbumRepo.getInstance();
     private static final Scanner scanner = new Scanner(System.in);
+
 
     public static void main(String[] args) {
         boolean running = true;
+
+        // Add the FanUI as an observer
+        albumRepo.addObserver(new FanUI());
 
         while (running) {
             System.out.println("===================================");
@@ -62,8 +69,8 @@ public class FanUI {
         String dateOfBirthStr = scanner.nextLine();
         LocalDate dateOfBirth = LocalDate.parse(dateOfBirthStr);
 
-        Fan createdFan = fanRepo.createFan(firstName, lastName, dateOfBirth);
-        System.out.println("Fan creat cu ID: " + createdFan.getIdFan());
+        Fan fanCreated = fanRepo.createFan(firstName, lastName, dateOfBirth);
+        System.out.println("Fan creat cu ID: " + fanCreated.getIdFan());
     }
 
     private static void viewAllFans() {
@@ -107,5 +114,11 @@ public class FanUI {
         fanRepo.removeFan(fanId);
         System.out.println("Fan sters cu succes.");
     }
-}
 
+    public void albumAdded(Album album, Fan fan) {
+        // Handle the album added event in FanUI
+        if (album != null) {
+            System.out.println("Fan notified about the new album: " + album);
+        }
+    }
+}

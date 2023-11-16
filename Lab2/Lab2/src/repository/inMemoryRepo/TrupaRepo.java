@@ -1,7 +1,7 @@
-package repository.inMemoryRepo;
+package Lab2.Lab2.src.repository.inMemoryRepo;
 
-import domain.MembruTrupa;
-import domain.Trupa;
+import Lab2.Lab2.src.domain.MembruTrupa;
+import Lab2.Lab2.src.domain.Trupa;
 
 import java.util.ArrayList;
 import java.util.List;

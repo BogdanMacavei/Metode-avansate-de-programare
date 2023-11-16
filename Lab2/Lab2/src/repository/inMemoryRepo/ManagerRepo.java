@@ -1,6 +1,6 @@
-package repository.inMemoryRepo;
+package Lab2.Lab2.src.repository.inMemoryRepo;
 
-import domain.Manager;
+import Lab2.Lab2.src.domain.Manager;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

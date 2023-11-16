@@ -1,8 +1,8 @@
-package domain;
+package Lab2.Lab2.src.domain;
 
 import java.time.LocalDate;
 
-public class Manager extends Persoana{
+public class Manager extends org.example.domain.Persoana {
     private int idManager;
     private String nume;
     private String prenume;

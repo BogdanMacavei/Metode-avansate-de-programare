@@ -1,7 +1,7 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
 import domain.Piesa;
-import repository.inMemoryRepo.PieseRepo;
+import Lab2.Lab2.src.repository.inMemoryRepo.PieseRepo;
 
 import java.util.List;
 import java.util.ArrayList;

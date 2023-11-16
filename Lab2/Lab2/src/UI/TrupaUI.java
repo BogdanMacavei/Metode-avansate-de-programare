@@ -1,7 +1,7 @@
-package UI;
+package Lab2.Lab2.src.UI;
 
-import domain.Trupa;
-import repository.inMemoryRepo.TrupaRepo;
+import Lab2.Lab2.src.domain.Trupa;
+import Lab2.Lab2.src.repository.inMemoryRepo.TrupaRepo;
 
 import java.util.List;
 import java.util.ArrayList;

@@ -1,6 +1,8 @@
 package domain;
 
-public class Persoana {
+import Lab2.Lab2.src.domain.Album;
+
+public abstract class Persoana {
     private int idPersoana;
     private String nume;
     private String prenume;
@@ -45,4 +47,6 @@ public class Persoana {
                 ", prenume='" + prenume + '\'' +
                 '}';
     }
+
+    public abstract void update(Album album);
 }
